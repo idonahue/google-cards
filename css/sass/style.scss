@@ -9,6 +9,9 @@ body {
     margin: 342px 64px;
 }
 .card {
+    // Variables
+    $card-height: 156px;
+    // Styleing
     height: 132px;
     width: 254px;
     padding: 9px 15px 15px 16px;
@@ -23,8 +26,52 @@ body {
     -webkit-border-radius: 2px 2px 2px 2px;
        -moz-border-radius: 2px 2px 2px 2px;
             border-radius: 2px 2px 2px 2px;
-
-
+    &.text-white {
+        h1,
+        .share {
+            color: white;
+        }
+    }
+    &.side-artwork {
+        height: $card-height;
+        width: 268px;
+        padding: 0 0 0 16px;
+        &.adele {
+            background-color: #424242;
+        }
+        .content {
+            padding-right: 14px;
+        }
+    }
+    .content {
+        position: relative;
+        height: 134px;
+        width: 154px;
+        padding: 9px 0 13px 0;
+        float: left;
+    }
+    .card-artwork {
+        width: 100px;
+        height: $card-height;
+        background-color: blue;
+        background-repeat: no-repeat;
+        background-position: center center;
+        float: left;
+        &.adele {
+            background-image: url('../img/photo-adele.png');
+        }
+    }
+    .share {
+        position: absolute;
+        bottom: 11px;
+        font-size: 12.5px;
+        text-transform: uppercase;
+    }
+    .link {
+        position: absolute;
+        bottom: 11px;
+        right: 12px;
+    }
 }
 
 h1 {
@@ -33,3 +80,21 @@ h1 {
     font-weight: 400;
     font-size: 15px;
 }
+
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
